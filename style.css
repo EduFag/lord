@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins&family=Source+Sans+3&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.section-inicial {
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/close-up-de-bife-de-carne-crua-com-ervas-e-especiarias-em-fundo-preto-ai-generative_123827-23893.avif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(0.8);
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo img {
+    width: 120px;
+    margin-left: 10%;
+}
+
+.nav-list {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-list a::after {
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    background-color: goldenrod;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-list a:hover::after{
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+header.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    transition: 0.3s;
+    background-color: black;
+}
+header.active .line2 {
+    opacity: 0;;
+    transition: 0.3s;
+}
+header.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+    transition: 0.3s;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        z-index: 2;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list a {
+        font-size: 30px;
+        margin-top: 2%;
+        color: black;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+    }
+
+    .mobile-menu {
+        display: block;
+        z-index: 3;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+
+    header {
+        width: 95%;
+        justify-content: space-between;
+    }
+}
+
+.section-inicial .background {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-inicial .background .textfield {
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.section-inicial .background .textfield .coroa {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-inicial .background .textfield .coroa img {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    animation: coroa-animation 3s infinite linear;
+}
+
+@keyframes coroa-animation {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 10%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.section-inicial .background .textfield h1 {
+    color: white;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: -5%;
+}
+.section-inicial .background .textfield p {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.section1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/fundo-de-madeira-de-carvalho-com-design-texturizado_53876-143033.avif);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 .text {
+    width: 80%;
+    height: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section1 .text p {
+    text-align: center;
+    margin-top: 1.5%;
+    font-size: 18px;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.section1 .text span {
+    margin-bottom: 7%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: rgb(111, 111, 111);
+}
+
+.section1 .text h1 {
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.section-produtos {
+    height: 120vh;
+    width: 100%;
+    background-image: url(img/fundo-de-madeira-de-carvalho-com-design-texturizado_53876-143033.avif);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.section-produtos h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 3%;
+    color: rgb(111, 111, 111);
+}
+
+.section-produtos .produtos .line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.section-produtos .produtos .line .painel {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* border: 1px solid black; */
+}
+
+.section-produtos .produtos .line .painel:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.um {
+    background-image: url(img/painel01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.dois {
+    background-image: url(img/painel02.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 7%;
+}
+.tres {
+    background-image: url(img/painel03.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.quatro {
+    background-image: url(img/painel04.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 7%;
+}
+.cinco {
+    background-image: url(img/painel05.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -7%;
+}
+.seis {
+    background-image: url(img/painel06.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.sete {
+    background-image: url(img/painel07.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -7%;
+}
+.oito {
+    background-image: url(img/painel09.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.section-produtos a {
+    text-decoration: none;
+    border: 1px solid rgb(111, 111, 111);
+    color: rgb(111, 111, 111);
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    margin-top: 3%;
+    transition: 0.5s;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.section-produtos a:hover {
+    background-color: rgb(111, 111, 111);
+    color: #fff;
+    border: 1px solid rgb(111, 111, 111);
+}
+
+.section-parceiros {
+    height: 70vh;
+    width: 100%;
+    background-image: url(img/fundo-de-madeira-de-carvalho-com-design-texturizado_53876-143033.avif);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-parceiros .parceiros {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+.section-parceiros h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 3%;
+    color: rgb(111, 111, 111);
+}
+
+.section-parceiros a {
+    text-decoration: none;
+    border: 1px solid rgb(111, 111, 111);
+    color: rgb(111, 111, 111);
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    margin-top: 3%;
+    transition: 0.5s;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.section-parceiros a:hover {
+    background-color: rgb(111, 111, 111);
+    color: #fff;
+    border: 1px solid rgb(111, 111, 111);
+}
+
+.section-sobre {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/fundo-de-madeira-de-carvalho-com-design-texturizado_53876-143033.avif);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-sobre .sobre {
+    width: 80%;
+    height: 70%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-sobre .sobre .textfield {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-sobre .sobre .textfield h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 3%;
+    color: rgb(111, 111, 111);
+    text-align: center;
+}
+.section-sobre .sobre .textfield p {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 18px;
+    font-family: 'Source Sans 3', sans-serif;
+    color: rgb(111, 111, 111);
+}
+.section-sobre .sobre .textfield span {
+    text-align: center;
+    margin-top: 1.5%;
+    font-size: 18px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bold;
+}
+.section-sobre .sobre .textfield a {
+    text-decoration: none;
+    border: 1px solid rgb(111, 111, 111);
+    color: rgb(111, 111, 111);
+    text-transform: uppercase;
+    padding: 10px 20px 10px 20px;
+    margin-top: 10%;
+    transition: 0.5s;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.section-sobre .sobre .textfield a:hover {
+    background-color: goldenrod;
+    color: #fff;
+    border: 1px solid goldenrod
+}
+
+
+footer {
+    background-color: rgb(26, 24, 24);
+    width: 100%;
+    height: 60vh;
+}
+
+@media (max-width: 1200px) {
+    .section-produtos .produtos .line .painel {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-produtos {
+        height: 140vh;
+    }
+
+    .section-produtos .produtos {
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    } 
+    .section-produtos .produtos .line {
+        flex-direction: column;
+    }
+
+    .section-produtos .produtos .line .painel {
+        width: 250px;
+        height: 150px;
+    }
+
+    .dois, .quatro, .cinco, .sete {
+        margin: 0;
+    }
+
+    .section-parceiros {
+        height: 50vh;
+    }
+
+    .section-sobre {
+        height: 120vh;
+    }
+
+}
+
+@media (max-width: 422px) {
+    .section1 {
+        height: 150vh;
+    }
+
+    .section-produtos {
+        height: 230vh;
+    }
+
+    .section-produtos .produtos {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    } 
+
+    .section-sobre {
+        height: 160vh;
+    }
+
+
+}
+
+
